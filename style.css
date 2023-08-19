@@ -440,7 +440,7 @@ ul li:nth-child(3) a:hover .fab {
 
 /* Media query for screens with maximum width of 768px (mobile screens) */
 @media (max-width: 768px) {
-  * {
+  body {
     overflow-x: hidden; /* Hide horizontal scrollbar */
   }
 
@@ -448,11 +448,11 @@ ul li:nth-child(3) a:hover .fab {
   }
 
   .section-paragraph-copy {
-    max-width: 350px;;
+    max-width: 350px;
   }
 
   .introduction-description {
-    max-width: 350px;;
+    max-width: 350px;
   }
 
   .image img {
