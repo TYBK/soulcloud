@@ -440,10 +440,10 @@ ul li:nth-child(3) a:hover .fab {
 
 /* Media query for screens with maximum width of 768px (mobile screens) */
 @media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
+  * {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
   }
-  
+
   .gallery-container {
   }
 
