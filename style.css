@@ -5,17 +5,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
-body{
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 300;
-	font-size: 15px;
-	line-height: 1.7;
-	color: #ececee;
-	background-color: #1f2029;
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #ececee;
+  background-color: #dbb59e;
+  background-image: url('assets/pexels-photo-7292745\ 2.png');
   background-position: center;
-  background-repeat: repeat;
-  background-size: 4%;
+  background-repeat: no-repeat; /* Remove the repeat */
+  background-size: cover; /* Set background size to cover */
   height: 100vh;
   width: 100%;
 }
@@ -133,7 +133,7 @@ h1{
   z-index: 9;
   overflow: hidden;
   box-shadow: 0 8px 30px 0 rgba(0,0,0,0.3);
-  background-color: #353746;
+  background-color: #dbb59e;
   animation: border-transform 7s linear infinite;
   transition: top 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),  
               right 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),
@@ -220,25 +220,6 @@ h1{
 .nav ul li a:hover {
   text-decoration: none;
   color: #b5b5b5;
-}
-
-.nav ul li a:after {
-  display: block;
-  position: absolute;
-  bottom: 0; /* Place the line at the bottom of the link */
-  content: '';
-  height: 2vh;
-  margin-bottom: -1vh; /* Adjust margin for centering the line */
-  width: 0;
-  left: 50%; /* Center the line horizontally */
-  transform: translateX(-50%); /* Center the line horizontally */
-  background-color: #353746;
-  opacity: 0.8;
-  transition: width 250ms linear;
-}
-
-.nav ul li a:hover:after {
-  width: 100%;
 }
 
 
@@ -419,7 +400,6 @@ ul li a {
 }
 
 ul li a:hover {
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   text-decoration:none;
 }
 
@@ -476,7 +456,6 @@ ul li:nth-child(3) a:hover .fab {
   }
 
   .image img {
-    max-height: 200px;
   }
 
   .footer {
