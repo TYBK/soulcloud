@@ -6,7 +6,7 @@ body {
   font-size: 15px;
   line-height: 1.7;
   color: #ececee;
-  background-color: #dbb59e;
+  background-color: #d5bda4;
   background-image: url('assets/pexels-photo-7292745\ 2.png');
   background-position: center;
   background-repeat: no-repeat; /* Remove the repeat */
@@ -97,7 +97,7 @@ h1{
   top: 10px;
   transform: rotate(45deg);
   height: 2px;
-  background-color: #ececee;
+  background-color: #edeeec;
   border-width: 0;
   transition: border-width 100ms 340ms ease, 
               top 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
@@ -128,7 +128,7 @@ h1{
   z-index: 9;
   overflow: hidden;
   box-shadow: 0 8px 30px 0 rgba(0,0,0,0.3);
-  background-color: #dbb59e;
+  background-color: #cfb089;
   animation: border-transform 7s linear infinite;
   transition: top 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),  
               right 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),
