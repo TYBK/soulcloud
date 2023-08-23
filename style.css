@@ -1,32 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 body {
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 1.7;
   color: #ececee;
   background-color: #d5bda4;
-  background-image: url('assets/pexels-photo-7292745\ 2.png');
   background-position: center;
   background-repeat: no-repeat; /* Remove the repeat */
   background-size: cover; /* Set background size to cover */
+  overflow-x: hidden;
+}
+
+.parallax-container {
+  position: relative;
   height: 100vh;
-  width: 100%;
-  overflow-x: hidden;;
+  overflow: hidden;
 }
-.section-center{
+.parallax-bg {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
-  display: block;
   width: 100%;
-  padding: 0;
-  margin: 0;
-  z-index: 6;
-  text-align: center;
-  transform: translateY(-50%);
+  height: 100%;
+  background-image: url('assets/pexels-photo-7292745\ 2.png'); /* Replace with your image URL */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
 }
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+}
+
 h1{
   font-family: 'roboto', sans-serif;
   font-weight: 800;
@@ -255,12 +271,13 @@ h1{
   position: relative;
   left: 0;
   height: 1000px;
-  margin-top: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform 0.8s ease; /* Add this line for smooth transition */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease, transform 2s ease;
 }
 
 .section-paragraph-copy {
@@ -270,6 +287,28 @@ h1{
   text-align: center;
   max-width: 500px;
   margin: 0 auto;
+}
+
+/* Apply animation when section paragraphs come into view */
+.section-paragraph.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+/* Apply fade-out when section paragraphs are about to leave view */
+.section-paragraph.fade-out {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+
+/* Media query for screens with maximum width of 768px (mobile screens) */
+@media (max-width: 768px) {
+  .section-paragraph-copy {
+    max-width: 350px;
+  }
 }
 
 .kenna-image {
@@ -288,7 +327,7 @@ h1{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform 0.8s ease; /* Add this line for smooth transition */
+  transition: opacity 2s ease;
 }
 
 .introduction-title {
@@ -331,6 +370,7 @@ h1{
   cursor: pointer;
 }
 
+
 .gallery-container {
   position: relative;
   width: 100%;
@@ -353,9 +393,8 @@ h1{
 }
 
 .image img {
-  width: 250px;
-  height: 250px;
-  border: 1px solid #ccc;
+  width: 350px;
+  height: 450px;
   border-radius: 15px;
 }
 
