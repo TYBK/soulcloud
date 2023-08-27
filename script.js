@@ -49,3 +49,17 @@ window.addEventListener('scroll', () => {
     });
     
     introductionObserver.observe(introductionSection);
+
+    const popup = document.getElementById('popup');
+    const popupTrigger = document.querySelector('.popup-trigger');
+    const closePopup = document.getElementById('close-popup');
+
+    popupTrigger.addEventListener('click', () => {
+        popup.style.display = 'block';
+    });
+
+    closePopup.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+
+    

@@ -63,6 +63,79 @@
     </div>
   </div>
 
+  
+
+    <!-- Modal structure -->
+    <div class="modal">
+        <section class="blog-post section-header-offset">
+            <div class="blog-post-container">
+                <div class="blog-post-data">
+                    <h3 class="title blog-post-title">Finding Your Purpose</h3>
+                    <div class="article-data">
+                        <span>Dec 14th 2023</span>
+                        <span class="article-data-spacer"></span>
+                        <span>4 Min read</span>
+                    </div>
+
+                </div>
+        
+                <div class="text-container">
+                    <h2>
+                        Lorem, ipsum dolor sit amet con
+                    </h2>
+
+                    <p>
+                        Lorem, ipsum dolor sit amet co
+                    </p>
+
+                    <div class="author-image-box">
+                        <img src="assets/IMAGE 2023-08-21 11:00:23.jpg" alt="" class="article-image">
+                    </div>
+        
+                    <blockquote class="quote">
+                        <p><span><i class="ri-double-quotes-l"></i></span> "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptates, laboriosam voluptatum quos non consequuntur nesciunt necessitatibus tempora quod inventore corporis rem nihil itaque, at provident minus aliquam veritatis. Labore?"  <span><i class="ri-double-quotes-r"></i></span></p>
+                    </blockquote>
+
+                    <h2>Guided Mantra Exercise</h2>
+
+                    <audio src="assets/SusanKaiserGreenland.mp3" controls class="audio-file"></audio>                     
+                    
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis eius possimus hic eligendi distinctio rerum incidunt, esse quasi eum molestiae ducimus ipsam quae, aliquid ullam placeat dolorum nulla vero. Quam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero quod necessitatibus, aspernatur pariatur asperiores earum quas adipisci veritatis quidem facilis! Nihil veniam quaerat nulla possimus, asperiores vero voluptatum placeat. Eveniet!
+                    </p>
+
+                    <div class="author d-grid">
+                        <div class="author-about">
+                            <h3 class="author-name">Kenna O'Maley</h3>
+                        </div>
+                    </div>
+                </div>
+                <button id="close-modal" class="close-modal">Close</button>
+            </div>
+        </section>
+    </div>  
+
+
+    <script>
+        const modal = document.querySelector('.modal');
+        const closeModal = document.getElementById('close-modal'); // Use 'close-modal' instead of 'close-popup'
+        const images = document.querySelectorAll('.image img');
+
+        images.forEach((image) => {
+            image.addEventListener('click', () => {
+                openModal();
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        function openModal() {
+            modal.style.display = 'block';
+        }
+    </script>
+
   <!-- Calendly badge widget begin -->
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
