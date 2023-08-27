@@ -741,6 +741,7 @@ button:hover {
 .close-modal {
   background-color: transparent;
   transition: background-color 0.3s, color 0.3s; /* Added transition */
+  color: black;
 }
 
 .close-modal:hover {
