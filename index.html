@@ -50,8 +50,8 @@
 
 	<div class="gallery-container">
     <div class="gallery">
-      <div class="image"><img src="assets/IMAGE 2023-08-21 11:00:37.jpg" alt="Image 1"></div>
-      <div class="image"><img src="assets/IMAGE 2023-08-21 11:00:35.jpg" alt="Image 2"></div>
+      <div class="image"><img src="assets/IMAGE 2023-08-21 11:00:37.jpg" alt="Image 1" data-modal-target="modal-1"></div>
+      <div class="image"><img src="assets/IMAGE 2023-08-21 11:00:35.jpg" alt="Image 2" data-modal-target="modal-2"></div>
       <div class="image"><img src="assets/IMAGE 2023-08-21 11:00:21.jpg" alt="Image 3"></div>
       <div class="image"><img src="assets/IMAGE 2023-08-21 11:00:29.jpg" alt="Image 4"></div>
       <div class="image"><img src="assets/IMAGE 2023-08-21 11:00:23.jpg" alt="Image 5"></div>
@@ -66,7 +66,7 @@
   
 
     <!-- Modal structure -->
-    <div class="modal">
+    <div class="modal" id="modal-1">
         <section class="blog-post section-header-offset">
             <div class="blog-post-container"> 
                 <div class="text-container">
@@ -115,24 +115,80 @@
         </section>
     </div>  
 
+        <!-- Modal structure -->
+        <div class="modal" id="modal-2">
+            <section class="blog-post section-header-offset">
+                <div class="blog-post-container"> 
+                    <div class="text-container">
+                        <div class="blog-post-data">
+                            <h3 class="title blog-post-title">Pooping Your Purpose</h3>
+                            <div class="article-data">
+                                <span>Dec 14th 2023</span>
+                                <span class="article-data-spacer"></span>
+                                <span>4 Min read</span>
+                            </div>
+        
+                        </div>
+                        
+                        <h2>
+                            Lorem, ipsum dolor sit amet con
+                        </h2>
+    
+                        <p>
+                            Lorem, ipsum dolor sit amet co
+                        </p>
+    
+                        <div class="author-image-box">
+                            <img src="assets/pexels-pixabay-39003.jpg" alt="" class="article-image">
+                        </div>
+            
+                        <blockquote class="quote">
+                            <p><span><i class="ri-double-quotes-l"></i></span> "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptates, laboriosam voluptatum quos non consequuntur nesciunt necessitatibus tempora quod inventore corporis rem nihil itaque, at provident minus aliquam veritatis. Labore?"  <span><i class="ri-double-quotes-r"></i></span></p>
+                        </blockquote>
+    
+                        <h2>Guided Mantra Exercise</h2>
+    
+                        <audio src="assets/SusanKaiserGreenland.mp3" controls class="audio-file"></audio>                     
+                        
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis eius possimus hic eligendi distinctio rerum incidunt, esse quasi eum molestiae ducimus ipsam quae, aliquid ullam placeat dolorum nulla vero. Quam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero quod necessitatibus, aspernatur pariatur asperiores earum quas adipisci veritatis quidem facilis! Nihil veniam quaerat nulla possimus, asperiores vero voluptatum placeat. Eveniet!
+                        </p>
+    
+                        <div class="author d-grid">
+                            <div class="author-about">
+                                <h3 class="author-name">Kenna O'Maley</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="close-modal" class="close-modal">Close</button>
+                </div>
+            </section>
+        </div>  
+
 
     <script>
-        const modal = document.querySelector('.modal');
-        const closeModal = document.getElementById('close-modal'); // Use 'close-modal' instead of 'close-popup'
+        const modals = document.querySelectorAll('.modal'); // Select all modal elements
         const images = document.querySelectorAll('.image img');
-
-        images.forEach((image) => {
+    
+        images.forEach((image, index) => {
             image.addEventListener('click', () => {
-                openModal();
+                openModal(modals[index]); // Pass the corresponding modal to open
             });
         });
-
-        closeModal.addEventListener('click', () => {
-            modal.style.display = 'none';
+    
+        modals.forEach((modal) => {
+            const closeModal = modal.querySelector('.close-modal');
+            closeModal.addEventListener('click', () => {
+                closeModalFunction(modal);
+            });
         });
-
-        function openModal() {
+    
+        function openModal(modal) {
             modal.style.display = 'block';
+        }
+    
+        function closeModalFunction(modal) {
+            modal.style.display = 'none';
         }
     </script>
 
