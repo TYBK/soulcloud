@@ -398,6 +398,13 @@ h1{
   flex: 0 0 auto;
   scroll-snap-align: start;
   padding: 30px;
+  opacity: .8;
+  transition: opacity 0.3s, color 0.3s; /* Added transition */
+}
+
+.image:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .image img {
